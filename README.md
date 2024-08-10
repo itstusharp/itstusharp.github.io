@@ -1,3 +1,3 @@
 Hello World!
 
-Current's temprature : {{weather.temperature_2m}}
+Current temprature : {{weather.temperature_2m}}
