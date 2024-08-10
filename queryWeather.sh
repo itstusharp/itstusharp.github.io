@@ -1,6 +1,6 @@
 
 #!/bin/bash
-WEATHER_FILE=./_data/devPosts.json
+WEATHER_FILE=./_data/weather.json
 
 echo -n "" >$POSTS_FILE
 
