@@ -1,3 +1,7 @@
 Hello World!
 
-Current temprature : {{weather.temperature_2m}}
+{% for AllWeather in site.data.Weather %}
+
+Current temperature : {{AllWeather.temperature_2m}}
+
+{% endfor %}
