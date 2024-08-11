@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run script to get articles from dev.to
+      - name: Run script to get current temprature
         run: |
           ./queryWeather.sh
 
@@ -20,5 +20,5 @@ jobs:
         run: |
           git config --global user.name 'itstusharp'
           git add .
-          git commit -am "Update articles list"
+          git commit -am "Update current temprature"
           git push
