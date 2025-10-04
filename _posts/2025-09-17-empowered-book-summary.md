@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Book Notes: Empowered by Marty Cagan"
-date: 2025-10-04
+date: 2025-09-17
 read_time: "3 min read"
 description: "Quick takeaways on building empowered product teams"
 ---
