@@ -1,7 +1,7 @@
 ---
 layout: post  
 title: "Connect Cursor IDE to PostgreSQL using Google's Toolbox MCP Server"  
-date: 2025-09-10
+date: 2025-09-25
 read_time: "3 min read"  
 description: "Integrating Cursor IDE with PostgreSQL through Google’s open source Toolbox MCP Server"  
 ---
