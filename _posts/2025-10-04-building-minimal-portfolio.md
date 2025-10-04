@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Building a Minimal Portfolio"
-date: 2025-06-04
+date: 2025-10-04
 read_time: "3 min read"
 description: "My experience building a minimal, stream-based portfolio website"
 ---
