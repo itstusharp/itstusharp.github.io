@@ -1,0 +1,339 @@
+/* === CSS Variables for Easy Customization === */
+:root {
+    --color-primary: #1a1a1a;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --color-background: #ffffff;
+    --color-border: #e5e5e5;
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    --max-width: 1200px;
+}
+
+/* === Reset & Base Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* === Typography === */
+h1, h2, h3 {
+    color: var(--color-primary);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--color-text-light);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* === Header & Navigation === */
+header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    z-index: 100;
+}
+
+nav {
+    padding: 1.5rem 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    position: relative;
+}
+
+.nav-links a.active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* === Hero Section === */
+.hero {
+    padding: 8rem 0 10rem;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+}
+
+/* === Work Section === */
+.work-section {
+    padding: 6rem 0;
+    background-color: #fafafa;
+}
+
+.work-section h2 {
+    text-align: center;
+}
+
+.work-stream {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stream-item {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.stream-item:last-child {
+    margin-bottom: 0;
+}
+
+.stream-item:last-child .stream-line {
+    display: none;
+}
+
+.stream-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.stream-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    border: 3px solid #fafafa;
+    box-shadow: 0 0 0 2px var(--color-primary);
+    z-index: 2;
+    flex-shrink: 0;
+}
+
+.stream-line {
+    width: 2px;
+    flex-grow: 1;
+    background-color: var(--color-border);
+    margin-top: 0.5rem;
+}
+
+.stream-content {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+}
+
+.stream-date {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+.stream-content h3 {
+    margin-bottom: 0.75rem;
+}
+
+.stream-content p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.project-title {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.project-title:hover {
+    opacity: 0.7;
+}
+
+/* === Contact Section === */
+.contact-section {
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.contact-intro {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.contact-stream {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.contact-link:hover {
+    opacity: 0.7;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 1.125rem;
+}
+
+.contact-arrow {
+    color: var(--color-primary);
+    font-size: 1.125rem;
+}
+
+/* === Footer === */
+footer {
+    padding: 3rem 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1.5rem;
+    }
+
+    .hero {
+        padding: 5rem 0 6rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .work-section,
+    .contact-section {
+        padding: 4rem 0;
+    }
+
+    .stream-item {
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .stream-content {
+        padding: 1.5rem;
+    }
+
+    .stream-dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.875rem;
+    }
+}
+
+
