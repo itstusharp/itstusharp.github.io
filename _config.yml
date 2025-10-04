@@ -1,0 +1,44 @@
+# Site settings
+title: Tushar Patil
+description: Engineering Manager portfolio showcasing projects and professional work
+url: "https://itstusharp.github.io"
+baseurl: ""
+
+# Author settings
+author:
+  name: Tushar Patil
+  linkedin: itstusharp
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+theme: null
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - assets/css/style.scss
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+

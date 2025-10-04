@@ -1,0 +1,143 @@
+---
+layout: default
+---
+
+<style>
+    /* Blog-specific styles */
+    .blog-header {
+        padding: 4rem 0 2rem;
+        text-align: center;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .blog-header .container {
+        max-width: 800px;
+    }
+
+    .blog-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--color-primary);
+    }
+
+    .blog-meta {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+        color: var(--color-text-light);
+        margin-bottom: 1rem;
+    }
+
+    .blog-content {
+        padding: 4rem 0;
+    }
+
+    .blog-content .container {
+        max-width: 800px;
+    }
+
+    .blog-content p {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        font-size: 1.05rem;
+    }
+
+    .blog-content h2 {
+        font-size: 1.75rem;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    .blog-content h3 {
+        font-size: 1.35rem;
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .blog-content ul,
+    .blog-content ol {
+        margin-bottom: 1.5rem;
+        padding-left: 2rem;
+    }
+
+    .blog-content li {
+        margin-bottom: 0.5rem;
+        line-height: 1.8;
+        color: var(--color-text-light);
+    }
+
+    .blog-content code {
+        background-color: #f5f5f5;
+        padding: 0.2rem 0.4rem;
+        border-radius: 3px;
+        font-size: 0.9em;
+        font-family: 'Courier New', monospace;
+    }
+
+    .blog-content pre {
+        background-color: #f5f5f5;
+        padding: 1.5rem;
+        border-radius: 5px;
+        overflow-x: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .blog-content pre code {
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+        color: var(--color-primary);
+        font-weight: 500;
+    }
+
+    .back-link:hover {
+        opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+        .blog-title {
+            font-size: 2rem;
+        }
+
+        .blog-meta {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .blog-content h2 {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+<!-- Blog Header -->
+<section class="blog-header">
+    <div class="container">
+        <h1 class="blog-title">{{ page.title }}</h1>
+        <div class="blog-meta">
+            <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+            {% if page.read_time %}
+            <span>•</span>
+            <span>{{ page.read_time }}</span>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Blog Content -->
+<section class="blog-content">
+    <div class="container">
+        <a href="{{ '/' | relative_url }}#work" class="back-link">← Back to Work</a>
+
+        {{ content }}
+    </div>
+</section>
+
