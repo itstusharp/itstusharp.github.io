@@ -8,6 +8,7 @@ baseurl: ""
 author:
   name: Tushar Patil
   linkedin: itstusharp
+  github: itstusharp
 
 # Build settings
 markdown: kramdown
